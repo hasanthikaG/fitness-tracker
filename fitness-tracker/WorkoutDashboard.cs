@@ -25,22 +25,14 @@ namespace fitness_tracker
 
         private void Workout_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = Workout.GetWorkOutList();
+            dataGridView1.DataSource = WorkoutAdd.GetWorkOutList();
+            label1.Text = Register.GetUser().FName;
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MainDashboard db = new MainDashboard();
-            this.Hide();
-            db.Activate();
-            db.ShowDialog();
-            this.Close();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Workout newWorkout = new Workout();
+            WorkoutAdd newWorkout = new WorkoutAdd();
 
             this.Hide();
             newWorkout.Activate();
@@ -50,52 +42,57 @@ namespace fitness_tracker
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
-                Console.WriteLine("row" + row);
-                if (row != null)
-                {
-                    selectedWorkoutId = row.Cells["WorkoutId"].Value.ToString()!;
-
-                }
-            }
         }
 
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            selectedWorkoutId = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString()!;
+            WorkOutDetails w = WorkoutAdd.GetWorkOutList().FirstOrDefault(p => p.WorkoutId.ToString() == selectedWorkoutId)!;
 
-
-            Console.WriteLine("selectedWorkoutId" + selectedWorkoutId);
-            WorkOutDetails w = Workout.GetWorkOutList().FirstOrDefault(p => p.WorkoutId.ToString() == selectedWorkoutId)!;
-
-
-            if (Workout.GetWorkOutList().Remove(w))
+            if (WorkoutAdd.GetWorkOutList().Remove(w))
             {
                 dataGridView1.DataSource = null;
-                dataGridView1.DataSource = Workout.GetWorkOutList();
-            }
-            else
-            {
-                Console.WriteLine("Not deleted");
+                dataGridView1.DataSource = WorkoutAdd.GetWorkOutList();
             }
 
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+   
+        private void button3_Click(object sender, EventArgs e)
         {
-
+            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            selectedWorkoutId = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString()!;
+            WorkoutUpdate wk = new WorkoutUpdate(selectedWorkoutId);
+            this.Hide();
+            wk.Activate();
+            wk.ShowDialog();
+            this.Close();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+   
+        private void clearBtn_Click(object sender, EventArgs e)
         {
+            MainDashboard db = new MainDashboard();
+            this.Hide();
+            db.Activate();
+            db.ShowDialog();
+            this.Close();
+        }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Main mn = new Main();
+            this.Hide();
+            mn.Activate();
+            mn.ShowDialog();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

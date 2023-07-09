@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\course_work1\\fitness-tracker\\fitness-tracker\\fitness-tracker.csproj",
+      "projectUniqueName": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\CourseWork1\\course_work1\\fitness-tracker\\fitness-tracker\\fitness-tracker.csproj",
       "projectName": "fitness-tracker",
-      "projectPath": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\course_work1\\fitness-tracker\\fitness-tracker\\fitness-tracker.csproj",
+      "projectPath": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\CourseWork1\\course_work1\\fitness-tracker\\fitness-tracker\\fitness-tracker.csproj",
       "packagesPath": "C:\\Users\\hasan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\course_work1\\fitness-tracker\\fitness-tracker\\obj\\",
+      "outputPath": "C:\\Users\\hasan\\OneDrive\\Desktop\\MScAdvancedSoftwareEngineeringModules\\Enterprise Application Development\\CourseWork1\\course_work1\\fitness-tracker\\fitness-tracker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hasan\\AppData\\Roaming\\NuGet\\NuGet.Config",

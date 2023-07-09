@@ -37,125 +37,123 @@
             tbEmail = new TextBox();
             tbPwd = new TextBox();
             label1 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
             button2 = new Button();
             button1 = new Button();
-            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // fName
             // 
             fName.AutoSize = true;
-            fName.Location = new Point(36, 92);
+            fName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            fName.ForeColor = Color.FromArgb(0, 0, 64);
+            fName.Location = new Point(154, 134);
             fName.Name = "fName";
-            fName.Size = new Size(64, 15);
+            fName.Size = new Size(86, 21);
             fName.TabIndex = 0;
             fName.Text = "First Name";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(37, 153);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 0, 64);
+            label2.Location = new Point(154, 176);
             label2.Name = "label2";
-            label2.Size = new Size(63, 15);
+            label2.Size = new Size(84, 21);
             label2.TabIndex = 1;
             label2.Text = "Last Name";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(37, 205);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(0, 0, 64);
+            label3.Location = new Point(190, 209);
             label3.Name = "label3";
-            label3.Size = new Size(36, 15);
+            label3.Size = new Size(48, 21);
             label3.TabIndex = 2;
             label3.Text = "Email";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(37, 265);
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(0, 0, 64);
+            label4.Location = new Point(162, 247);
             label4.Name = "label4";
-            label4.Size = new Size(57, 15);
+            label4.Size = new Size(76, 21);
             label4.TabIndex = 3;
             label4.Text = "Password";
             // 
             // tbFName
             // 
             tbFName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbFName.Location = new Point(37, 110);
+            tbFName.Location = new Point(246, 136);
             tbFName.Name = "tbFName";
-            tbFName.Size = new Size(421, 23);
+            tbFName.Size = new Size(366, 23);
             tbFName.TabIndex = 4;
             // 
             // tbLName
             // 
             tbLName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbLName.Location = new Point(37, 171);
+            tbLName.Location = new Point(246, 174);
             tbLName.Name = "tbLName";
-            tbLName.Size = new Size(421, 23);
+            tbLName.Size = new Size(366, 23);
             tbLName.TabIndex = 5;
             // 
             // tbEmail
             // 
             tbEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbEmail.Location = new Point(37, 223);
+            tbEmail.Location = new Point(246, 211);
             tbEmail.Name = "tbEmail";
-            tbEmail.Size = new Size(421, 23);
+            tbEmail.Size = new Size(366, 23);
             tbEmail.TabIndex = 6;
             // 
             // tbPwd
             // 
             tbPwd.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbPwd.Location = new Point(37, 283);
+            tbPwd.Location = new Point(246, 249);
             tbPwd.Name = "tbPwd";
-            tbPwd.Size = new Size(421, 23);
+            tbPwd.Size = new Size(366, 23);
             tbPwd.TabIndex = 7;
             tbPwd.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(136, 34);
+            label1.Font = new Font("Gadugi", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 0, 64);
+            label1.Location = new Point(295, 45);
             label1.Name = "label1";
-            label1.Size = new Size(213, 45);
+            label1.Size = new Size(216, 38);
             label1.TabIndex = 8;
             label1.Text = "User Register";
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 49.42085F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50.57915F));
-            tableLayoutPanel1.Controls.Add(button2, 1, 0);
-            tableLayoutPanel1.Controls.Add(button1, 0, 0);
-            tableLayoutPanel1.Location = new Point(37, 408);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(421, 32);
-            tableLayoutPanel1.TabIndex = 9;
             // 
             // button2
             // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(211, 3);
+            button2.BackColor = Color.FromArgb(0, 0, 64);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(533, 322);
             button2.Name = "button2";
-            button2.Size = new Size(207, 23);
+            button2.Size = new Size(143, 44);
             button2.TabIndex = 1;
-            button2.Text = "Register";
-            button2.UseVisualStyleBackColor = true;
+            button2.Text = "Sign up";
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button1
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(3, 3);
+            button1.ForeColor = Color.FromArgb(0, 0, 64);
+            button1.Location = new Point(12, 12);
             button1.Name = "button1";
-            button1.Size = new Size(202, 26);
+            button1.Size = new Size(50, 25);
             button1.TabIndex = 0;
             button1.Text = "Back";
             button1.UseVisualStyleBackColor = true;
@@ -165,8 +163,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(478, 452);
-            Controls.Add(tableLayoutPanel1);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 479);
+            Controls.Add(button1);
+            Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(tbPwd);
             Controls.Add(tbEmail);
@@ -176,12 +176,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(fName);
-            MaximumSize = new Size(494, 491);
-            MinimumSize = new Size(436, 491);
             Name = "Register";
             Text = "Register";
             Load += Register_Load;
-            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -197,7 +194,6 @@
         private TextBox tbEmail;
         private TextBox tbPwd;
         private Label label1;
-        private TableLayoutPanel tableLayoutPanel1;
         private Button button1;
         private Button button2;
     }

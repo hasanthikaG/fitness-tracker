@@ -44,7 +44,6 @@ namespace fitness_tracker
             }
             else
             {
-                MessageBox.Show("Login Successful");
                 MainDashboard dBoard = new MainDashboard();
 
                 this.Hide();
@@ -57,7 +56,7 @@ namespace fitness_tracker
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-           Main mn = new Main();
+            Main mn = new Main();
             this.Hide();
             mn.Activate();
             mn.ShowDialog();

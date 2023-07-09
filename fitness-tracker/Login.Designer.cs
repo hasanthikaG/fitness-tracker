@@ -33,18 +33,18 @@
             label2 = new Label();
             tbPassword = new TextBox();
             label3 = new Label();
-            tableLayoutPanel1 = new TableLayoutPanel();
             loginBtn = new Button();
             clearBtn = new Button();
-            tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(21, 117);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 0, 64);
+            label1.Location = new Point(181, 152);
             label1.Name = "label1";
-            label1.Size = new Size(36, 15);
+            label1.Size = new Size(48, 21);
             label1.TabIndex = 0;
             label1.Text = "Email";
             label1.Click += label1_Click;
@@ -52,17 +52,19 @@
             // tbEmail
             // 
             tbEmail.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbEmail.Location = new Point(21, 145);
+            tbEmail.Location = new Point(259, 150);
             tbEmail.Name = "tbEmail";
-            tbEmail.Size = new Size(445, 23);
+            tbEmail.Size = new Size(355, 23);
             tbEmail.TabIndex = 1;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(21, 195);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 0, 64);
+            label2.Location = new Point(153, 210);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(76, 21);
             label2.TabIndex = 2;
             label2.Text = "Password";
             label2.Click += label2_Click;
@@ -70,56 +72,49 @@
             // tbPassword
             // 
             tbPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbPassword.Location = new Point(21, 222);
+            tbPassword.Location = new Point(259, 208);
             tbPassword.Name = "tbPassword";
-            tbPassword.Size = new Size(445, 23);
+            tbPassword.Size = new Size(355, 23);
             tbPassword.TabIndex = 3;
             tbPassword.UseSystemPasswordChar = true;
             tbPassword.TextChanged += textBox2_TextChanged;
             // 
             // label3
             // 
-            label3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(143, 48);
+            label3.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(0, 0, 64);
+            label3.Location = new Point(311, 44);
             label3.Name = "label3";
-            label3.Size = new Size(149, 32);
+            label3.Size = new Size(202, 52);
             label3.TabIndex = 4;
             label3.Text = "USER LOGIN";
-            // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(loginBtn, 1, 0);
-            tableLayoutPanel1.Controls.Add(clearBtn, 0, 0);
-            tableLayoutPanel1.Location = new Point(21, 385);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(445, 37);
-            tableLayoutPanel1.TabIndex = 5;
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // loginBtn
             // 
             loginBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            loginBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            loginBtn.Location = new Point(225, 3);
+            loginBtn.BackColor = Color.FromArgb(0, 0, 64);
+            loginBtn.FlatAppearance.BorderSize = 0;
+            loginBtn.FlatStyle = FlatStyle.Flat;
+            loginBtn.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            loginBtn.ForeColor = SystemColors.ControlLightLight;
+            loginBtn.Location = new Point(369, 281);
             loginBtn.Name = "loginBtn";
-            loginBtn.Size = new Size(217, 23);
+            loginBtn.Size = new Size(102, 33);
             loginBtn.TabIndex = 0;
             loginBtn.Text = "Login";
-            loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.UseVisualStyleBackColor = false;
             loginBtn.Click += loginBtn_Click;
             // 
             // clearBtn
             // 
             clearBtn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            clearBtn.FlatStyle = FlatStyle.Flat;
             clearBtn.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            clearBtn.Location = new Point(3, 3);
+            clearBtn.ForeColor = Color.FromArgb(0, 0, 64);
+            clearBtn.Location = new Point(12, 20);
             clearBtn.Name = "clearBtn";
-            clearBtn.Size = new Size(216, 23);
+            clearBtn.Size = new Size(75, 25);
             clearBtn.TabIndex = 1;
             clearBtn.Text = "Back";
             clearBtn.UseVisualStyleBackColor = true;
@@ -129,19 +124,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(478, 452);
-            Controls.Add(tableLayoutPanel1);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(800, 479);
+            Controls.Add(clearBtn);
+            Controls.Add(loginBtn);
             Controls.Add(label3);
             Controls.Add(tbPassword);
             Controls.Add(label2);
             Controls.Add(tbEmail);
             Controls.Add(label1);
-            MaximumSize = new Size(494, 491);
-            MinimumSize = new Size(436, 491);
             Name = "Login";
             Text = "Login";
             Load += Form1_Load;
-            tableLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -153,7 +147,6 @@
         private Label label2;
         private TextBox tbPassword;
         private Label label3;
-        private TableLayoutPanel tableLayoutPanel1;
         private Button loginBtn;
         private Button clearBtn;
     }

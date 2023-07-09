@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -30,25 +31,35 @@ namespace fitness_tracker
 
         private void button2_Click(object sender, EventArgs e)
         {
-            user.UserId = 1;
-            user.FName = tbFName.Text;
-            user.LName = tbLName.Text;
-            user.Email = tbEmail.Text;
-            user.Password = tbPwd.Text;
 
-            MessageBox.Show("User Registered Successfully!");
+            if (String.IsNullOrEmpty(tbFName.Text) || String.IsNullOrEmpty(tbLName.Text) || String.IsNullOrEmpty(tbFName.Text) || String.IsNullOrEmpty(tbEmail.Text) || String.IsNullOrEmpty(tbPwd.Text))
+            {
+                MessageBox.Show("Please fill all the fields!");
+            }
+            else if (!new EmailAddressAttribute().IsValid(tbEmail.Text))
+            {
+                MessageBox.Show("Email is invalid!");
+            }
+            else if (tbPwd.Text.Length < 3)
+            {
+                MessageBox.Show("Password must contain atleast 3 characters!");
+            }
+            else
+            {
+                user.UserId = 1;
+                user.FName = tbFName.Text;
+                user.LName = tbLName.Text;
+                user.Email = tbEmail.Text;
+                user.Password = tbPwd.Text;
 
-            Login lgn = new Login();
+                Login lgn = new Login();
+                this.Hide();
+                lgn.Activate();
+                lgn.ShowDialog();
+                this.Close();
 
-            this.Hide();
-            lgn.Activate();
-            lgn.ShowDialog();
-            this.Close();
+            }
 
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
 
         }
 

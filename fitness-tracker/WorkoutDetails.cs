@@ -10,10 +10,9 @@ namespace fitness_tracker
     public class WorkOutDetails
     {
         private int userId;
-        private int workoutId;
+        private string workoutId;
         private string workoutName;
         private string workoutDescription;
-        private string workoutType;
         private double bodyWeight;
         private DateTime date;
         private double durationInHours;
@@ -25,7 +24,7 @@ namespace fitness_tracker
             set { userId = value; }
         }
 
-        public int WorkoutId
+        public string WorkoutId
         {
             get { return workoutId; }
             set { workoutId = value; }
@@ -41,12 +40,6 @@ namespace fitness_tracker
         {
             get { return workoutDescription; }
             set { workoutDescription = value; }
-        }
-
-        public string WorkoutType
-        {
-            get { return workoutType; }
-            set { workoutType = value; }
         }
        
         public double BodyWeight

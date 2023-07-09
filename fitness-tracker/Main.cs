@@ -20,7 +20,6 @@ namespace fitness_tracker
         private void Main_Load(object sender, EventArgs e)
         {
             string currentFolder = AppDomain.CurrentDomain.BaseDirectory;
-            Console.Out.WriteLine(currentFolder);
             string image = Path.Combine(currentFolder, "main_fitness_tracker.png");
             pictureBox1.Image = Image.FromFile(image);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -44,6 +43,11 @@ namespace fitness_tracker
             login.Activate();
             login.ShowDialog();
             this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
